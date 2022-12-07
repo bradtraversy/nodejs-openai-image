@@ -1,15 +1,15 @@
 {
-  "name": "ai-image-gen",
+  "name": "nodejs-openapi-image",
   "version": "1.0.0",
-  "description": "",
+  "description": "Generate images using OpenAI",
   "main": "index.js",
   "scripts": {
     "start": "node index",
     "dev": "nodemon index"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Brad Traversy",
+  "license": "MIT",
   "dependencies": {
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
