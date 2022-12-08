@@ -1,4 +1,4 @@
-const { Configuration, OpenAIApi } = require('openai');
+const { Configuration, OpenAIApi } = require("openai");
 
 const configuration = new Configuration({
   apiKey: process.env.OPENAI_API_KEY,
@@ -9,12 +9,12 @@ const generateImage = async (req, res) => {
   const { prompt, size } = req.body;
 
   const imageSize =
-    size === 'small' ? '256x256' : size === 'medium' ? '512x512' : '1024x1024';
+    size === "small" ? "256x256" : size === "medium" ? "512x512" : "1024x1024";
 
   try {
     const response = await openai.createImage({
       prompt,
-      n: 1,
+      n: 1, // just to limit number of images by hardcoding it here and not on frontend
       size: imageSize,
     });
 
@@ -33,8 +33,9 @@ const generateImage = async (req, res) => {
     }
 
     res.status(400).json({
+      //probably by violating the content policy
       success: false,
-      error: 'The image could not be generated',
+      error: "The image could not be generated",
     });
   }
 };

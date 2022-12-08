@@ -1,14 +1,14 @@
 function onSubmit(e) {
   e.preventDefault();
 
-  document.querySelector('.msg').textContent = '';
-  document.querySelector('#image').src = '';
+  document.querySelector(".msg").textContent = "";
+  document.querySelector("#image").src = "";
 
-  const prompt = document.querySelector('#prompt').value;
-  const size = document.querySelector('#size').value;
+  const prompt = document.querySelector("#prompt").value;
+  const size = document.querySelector("#size").value;
 
-  if (prompt === '') {
-    alert('Please add some text');
+  if (prompt.trim() === "") {
+    alert("Please add some text");
     return;
   }
 
@@ -19,10 +19,10 @@ async function generateImageRequest(prompt, size) {
   try {
     showSpinner();
 
-    const response = await fetch('/openai/generateimage', {
-      method: 'POST',
+    const response = await fetch("/openai/generateimage", {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({
         prompt,
@@ -32,28 +32,28 @@ async function generateImageRequest(prompt, size) {
 
     if (!response.ok) {
       removeSpinner();
-      throw new Error('That image could not be generated');
+      throw new Error("That image could not be generated");
     }
 
-    const data = await response.json();
+    const data = await response.json(); //await again because .json() returns a promise = asynchronous process
     // console.log(data);
 
     const imageUrl = data.data;
 
-    document.querySelector('#image').src = imageUrl;
+    document.querySelector("#image").src = imageUrl;
 
     removeSpinner();
   } catch (error) {
-    document.querySelector('.msg').textContent = error;
+    document.querySelector(".msg").textContent = error;
   }
 }
 
 function showSpinner() {
-  document.querySelector('.spinner').classList.add('show');
+  document.querySelector(".spinner").classList.add("show");
 }
 
 function removeSpinner() {
-  document.querySelector('.spinner').classList.remove('show');
+  document.querySelector(".spinner").classList.remove("show");
 }
 
-document.querySelector('#image-form').addEventListener('submit', onSubmit);
+document.querySelector("#image-form").addEventListener("submit", onSubmit);
