@@ -8,17 +8,18 @@
     <link rel="stylesheet" href="css/spinner.css" />
 
     <script src="js/main.js" defer></script>
-    <title>OpenAI Image Genrator</title>
+    <title>Image Genrator</title>
   </head>
   <body>
     <header>
       <div class="navbar">
         <div class="logo">
-          <h2>OpenAI Image Genrator</h2>
+          <h2>Image Genrator</h2>
+          
         </div>
         <div class="nav-links">
           <ul>
-            <li>
+            <li >
               <a href="https://beta.openai.com/docs" target="_blank"
                 >OpenAI API Docs</a
               >
@@ -26,22 +27,24 @@
           </ul>
         </div>
       </div>
+      <hr>
     </header>
 
     <main>
       <section class="showcase">
         <form id="image-form">
-          <h1>Describe An Image</h1>
-          <div class="form-control">
-            <input type="text" id="prompt" placeholder="Enter Text" />
-          </div>
-          <!-- size -->
-          <div class="form-control">
-            <select name="size" id="size">
-              <option value="small">Small</option>
-              <option value="medium" selected>Medium</option>
-              <option value="large">Large</option>
-            </select>
+          <h1>Start with a detailed description
+          </h1>
+          <div class="inp">
+            <input autocomplete="off" type="text" id="prompt" placeholder="An Imperfect" />
+            <!-- size -->
+            <!-- <div class="form-control"> -->
+              <select name="size" id="size">
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+              </select>
+            <!-- </div> -->
           </div>
           <button type="submit" class="btn">Generate</button>
         </form>
@@ -50,7 +53,7 @@
       <section class="image">
         <div class="image-container">
           <h2 class="msg"></h2>
-          <img src="" alt="" id="image" />
+          <img src="" alt="" id="image"/>
         </div>
       </section>
     </main>
