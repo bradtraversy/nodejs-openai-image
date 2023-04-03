@@ -12,10 +12,12 @@
   "license": "MIT",
   "dependencies": {
     "dotenv": "^16.0.3",
+    "env": "^0.0.2",
     "express": "^4.18.2",
-    "openai": "^3.1.0"
+    "node": "^19.8.1",
+    "openai": "^3.2.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.22"
   }
 }

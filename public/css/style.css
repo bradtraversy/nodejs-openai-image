@@ -9,7 +9,7 @@
 }
 
 :root {
-  --primary-color: #f9b64d;
+  --primary-color: #7069c9;
 }
 
 body {
@@ -107,7 +107,7 @@ form button:hover {
 
 img {
   display: block;
-  margin: auto;
+  /* margin: ; */
 }
 
 .msg {
