@@ -147,8 +147,7 @@ form button:hover {
 
 img {
   display: block;
-  /* margin: 4px; */
-  margin-left: 30px;
+  margin: auto;
 }
 
 .msg {
@@ -156,6 +155,7 @@ img {
   text-align: center;
   margin-top: 1rem;
 }
+
 
 .image-container{
   display: grid;
