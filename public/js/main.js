@@ -1,8 +1,11 @@
 function onSubmit(e) {
   e.preventDefault();
 
-  document.querySelector('.msg').textContent = '';
+  // document.querySelector('.msg').textContent = '';
   document.querySelector('#image').src = '';
+  document.querySelector('#image1').src = '';
+  document.querySelector('#image2').src = '';
+  document.querySelector('#image3').src = '';
 
   const prompt = document.querySelector('#prompt').value;
   const size = document.querySelector('#size').value;
@@ -36,11 +39,19 @@ async function generateImageRequest(prompt, size) {
     }
 
     const data = await response.json();
-    console.log(data);
+    // console.log(data);
+    // console.log(data[0].data);
 
-    const imageUrl = data.data;
+    const imageUrl = data.data[0];
+    const imageUrl1 = data.data[1];
+    const imageUrl2 = data.data[2];
+    const imageUrl3 = data.data[3];
+    // console.log(imageUrl)
 
     document.querySelector('#image').src = imageUrl;
+    document.querySelector('#image1').src = imageUrl1;
+    document.querySelector('#image2').src = imageUrl2;
+    document.querySelector('#image3').src = imageUrl3;
 
     removeSpinner();
   } catch (error) {
