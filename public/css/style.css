@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
 
+
 *,
 *:before,
 *:after {
@@ -9,25 +10,35 @@
 }
 
 :root {
-  --primary-color: #f9b64d;
+  --primary-color: rgb(250, 250, 252);
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
   font-size: 16px;
   line-height: 1.5;
   color: #333;
-  background: #f4f4f4;
+  background: rgb(250, 250, 252);
 }
 
 /* Navbar */
 .navbar {
-  background: #333;
-  color: #fff;
+  position: fixed;
+  background: rgb(250, 250, 252);
+  color: #060709;
   padding: 1rem;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.nav-links ul li a{
+  color: #050101;
+}
+
+nav-links ul li a:hover{
+  color: black;
+  font-weight: 400;
 }
 
 .navbar ul {
@@ -57,13 +68,13 @@ body {
 }
 
 .showcase h1 {
-  font-size: 2.5rem;
-  color: #333;
-  text-align: center;
-  padding: 1rem 0;
+  margin-top: 250px;
+  /* font-size: 2.5rem; */
+  color: rgb(108, 108, 108);
+  text-align: start;
 }
 
-.showcase form {
+.showcase{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -72,26 +83,51 @@ body {
   width: 100%;
 }
 
-.showcase form input,
-form select {
+.inp{
+  display: flex;
+  flex-direction: row;
+}
+
+.showcase form input{
   font-size: 20px;
-  width: 500px;
-  max-width: 500px;
+  width: 600rem;
+  max-width: 70rem;
   padding: 1rem;
   border: 1px solid #ccc;
   border-radius: 5px;
   margin-bottom: 1rem;
+  box-shadow: 5px 10px rgb(228, 228, 237);
+}
+
+.showcase form input:focus{
+  border:none
+}
+
+select{
+  margin-left: 5px;
+  width: 100px;
+  height: 55px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  box-shadow: 5px 10px rgb(228, 228, 237);
+}
+
+option{
+  font-size: 13px;
 }
 
 form button {
   font-size: 20px;
   padding: 1rem 2rem;
   border: none;
-  border-radius: 5px;
-  background: #333;
-  color: #fff;
+  border-radius: 15px;
+  background: #050101;
+  color: #eceaea;
   cursor: pointer;
   margin-top: 20px;
+  transition: all;
+  transition-duration:500ms ;
 }
 
 form button:hover {
@@ -102,8 +138,12 @@ form button:hover {
 
 .image {
   width: 100%;
-  margin-top: 2rem;
+  margin-top: 4rem;
 }
+
+/* #image1{
+  width: 100%;
+} */
 
 img {
   display: block;
@@ -114,4 +154,11 @@ img {
   font-size: 1.6rem;
   text-align: center;
   margin-top: 1rem;
+}
+
+
+.image-container{
+  display: grid;
+  grid-template-columns: repeat(3, 2fr);
+  row-gap: 10px;
 }

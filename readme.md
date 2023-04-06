@@ -2,7 +2,8 @@
 
 This is a simple image generator built with Node.js and Express that uses [OpenAI's Dall-E models](https://beta.openai.com/docs/guides/images) to generate images.
 
-<img src="public/img/screen.png" width="500">
+<img src="public/img/ss.png" width="500">
+>>>>>>> 5ad53e3d31e8f5b997e0f3e96a485fcf3d17776d
 
 ## Usage
 
@@ -22,6 +23,6 @@ Run server
 npm start
 ```
 
-Visit `http://localhost:5000` in your browser.
+Visit `http://localhost:3000` in your browser.
 
 The endpoint is at `POST http://localhost:5000/openai/generateimage`.
