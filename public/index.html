@@ -14,16 +14,7 @@
     <header>
       <div class="navbar">
         <div class="logo">
-          <h2>OpenAI Image Genrator</h2>
-        </div>
-        <div class="nav-links">
-          <ul>
-            <li>
-              <a href="https://beta.openai.com/docs" target="_blank"
-                >OpenAI API Docs</a
-              >
-            </li>
-          </ul>
+          <h2>A11 Image Genrator</h2>
         </div>
       </div>
     </header>
@@ -31,20 +22,36 @@
     <main>
       <section class="showcase">
         <form id="image-form">
+          <!-- questions -->
           <h1>Describe An Image</h1>
           <div class="form-control">
-            <input type="text" id="prompt" placeholder="Enter Text" />
+            <input type="text" id="input1" placeholder="What imgae do you want to create?" />
           </div>
+          <div class="form-control">
+            <input type="text" id="input2" placeholder="What is the event?" />
+          </div>
+          <div class="form-control">
+            <input type="text" id="input3" placeholder="Which product would you like to feature?" />
+          </div>
+
           <!-- size -->
           <div class="form-control">
+            <select name="quality" id="quality">
+              <option value="standard" selected>Standard</option>
+              <option value="hd">HD</option>
+            </select>
+          </div>
+
+          <div class="form-control">
             <select name="size" id="size">
-              <option value="small">Small</option>
-              <option value="medium" selected>Medium</option>
-              <option value="large">Large</option>
+              <option value="1024x1024" selected>1024x1024</option>
+              <option value="1024x1792" >1024x1792</option>
+              <option value="1792x1024">1792x1024</option>
             </select>
           </div>
           <button type="submit" class="btn">Generate</button>
         </form>
+          
       </section>
 
       <section class="image">

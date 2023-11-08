@@ -2,8 +2,6 @@
 
 This is a simple image generator built with Node.js and Express that uses [OpenAI's Dall-E models](https://beta.openai.com/docs/guides/images) to generate images.
 
-<img src="public/img/screen.png" width="500">
-
 ## Usage
 
 Rename the `example.env` file to `.env`.

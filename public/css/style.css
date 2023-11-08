@@ -9,7 +9,7 @@
 }
 
 :root {
-  --primary-color: #f9b64d;
+  --primary-color: #ff9e4f;
 }
 
 body {
@@ -51,7 +51,7 @@ body {
 
 /* Showcase */
 .showcase {
-  height: 450px;
+  height: 550px;
   width: 100%;
   background: var(--primary-color);
 }
@@ -60,7 +60,7 @@ body {
   font-size: 2.5rem;
   color: #333;
   text-align: center;
-  padding: 1rem 0;
+  padding: 0.8rem 0;
 }
 
 .showcase form {
@@ -85,13 +85,13 @@ form select {
 
 form button {
   font-size: 20px;
-  padding: 1rem 2rem;
+  padding: 1rem 3rem;
   border: none;
   border-radius: 5px;
   background: #333;
   color: #fff;
   cursor: pointer;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 form button:hover {
